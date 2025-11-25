@@ -14,10 +14,11 @@ class estrai_numeri:
             if risultato:
                 contatore = contatore + 1
                 lista_papabili.append(alunno)
-        if contatore = 0
 
         if contatore > 3:
             self.estrai_numero(lista_papabili,3)
+        else:
+            re.
 
     def estrai_numero(self,lista_alunni,volte):
         lista_scelti = []
@@ -53,3 +54,4 @@ alunni = [
 
 estrai1 = estrai_numeri(alunni)
 estrai1.cerca_alunni("Arl")
+#TODO fare con tutte le 3 casistiche
