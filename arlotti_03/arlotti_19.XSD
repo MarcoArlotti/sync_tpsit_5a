@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- progettare mediante uno schema xsd un linguaggio xml che consenta  -->
+<!-- di rappresentare una rubrica dei riferimenti a persone -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="rubrica"> 
+        <xs:complexType> <!-- elemento complesso puo contenere più elementi-->
+            <xs:sequence> <!-- type hinting, gli dici che dato è-->
+                <xs:element name="contatto" maxOccurs="unbounded"> <!-- è un elemento che contiene altri elementi (max occurrance cioè appare più volte) -->
+                    <xs:complexType> <!-- indica una lista di elementi semplice-->
+                        <xs:sequence> <!-- type hinting, gli dici che dato è-->
+                            <xs:element name="id" type="xs:string"/> <!-- elemento semplice -->
+                            <xs:element name="nome" type="xs:string"/> <!-- elemento semplice -->
+                            <xs:element name="cognome" type="xs:string"/> <!-- elemento semplice -->
+                            <xs:element name="telefono" type="xs:string" maxOccurs="unbounded"/> <!-- elemento semplice + può apparire più volte -->
+                            <xs:element name="email" type="xs:string" maxOccurs="unbounded"/> <!-- elemento semplice + può apparire più volte -->
+                        </xs:sequence> <!-- chiusura dei tag precedenti-->
+                    </xs:complexType> <!-- chiusura dei tag precedenti-->
+                </xs:element> <!-- chiusura dei tag precedenti-->
+            </xs:sequence> <!-- chiusura dei tag precedenti-->
+        </xs:complexType> <!-- chiusura dei tag precedenti-->
+    </xs:element> <!-- chiusura dei tag precedenti-->
+</xs:schema> <!-- chiusura dei tag precedenti-->
