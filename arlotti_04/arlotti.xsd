@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="linguaggio">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="scheda_tecnica" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id" type="xs:integer"/>
+                            <xs:element name="nome" type="xs:string"/>
+                            <xs:element name="versione" type="xs:string"/>
+                            <xs:element name="spiegazione" type="xs:string"/>
+                            <xs:element name="compilato" type="xs:boolean"/>
+                            <xs:element name="funzione" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="id" type="xs:string"/>
+                                        <xs:element name="nome" type="xs:string"/>
+                                        <xs:element name="dettagli_funzionamento" type="xs:string"/>
+                                        <xs:element name="attributi_in_entrata" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
