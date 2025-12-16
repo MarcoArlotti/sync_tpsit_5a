@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="arlotti.xsd" type="xsd"?>
-<scheda_tecnica>
-    <id>1</id>
-    <nome>python</nome>
-    <versione>3.11</versione>
-    <spiegazione><![CDATA[]]></spiegazione>
-    <compilato>false</compilato>
-    <funzione>
+<linguaggio>
+    <scheda_tecnica>
         <id>1</id>
-        <nome>print</nome>
-        <dettagli_funzionamento>stampa una stringa</dettagli_funzionamento>
-        <attributi_in_entrata><![CDATA[(*values: object,    sep: str | None = " ",    end: str | None = "\n",    file: SupportsWrite[str] | None = None,    flush: Literal[False] = False,)]></attributi_in_entrata>]]></attributi_in_entrata>
-    </funzione>
-</scheda_tecnica>
+        <nome>python</nome>
+        <versione>3.11</versione>
+        <spiegazione><![CDATA[]]></spiegazione>
+        <compilato>false</compilato>
+        <funzione>
+            <id>1</id>
+            <nome>print</nome>
+            <dettagli_funzionamento>stampa una stringa</dettagli_funzionamento>
+            <attributi_in_entrata><![CDATA[(*values: object, sep: str | None = " ", end: str | None = "\n", file: SupportsWrite[str] | None = None, flush: Literal[False] = False,)]]></attributi_in_entrata>
+        </funzione>
+    </scheda_tecnica>
+</linguaggio>
