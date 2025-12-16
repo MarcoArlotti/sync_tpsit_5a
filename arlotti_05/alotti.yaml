@@ -1,0 +1,16 @@
+rubrica_classe:
+  alunno:
+    id: !!int 1
+    nome: !!str Fabio
+    voto_pratico: 
+      id: !!int 1
+      data: !!str 2025-12-16T14:40:00+01:00
+      voto: !!float 6.5
+    voto_teorico: 
+      id: !!int 1
+      data: !!str 2025-12-16T10:40:00+01:00
+      voto: !!float 5.0
+    media: !!float 5.75
+    commento: !!str >
+      Fabio ha bisogno di studiare di più
+      perchè è una pippa.

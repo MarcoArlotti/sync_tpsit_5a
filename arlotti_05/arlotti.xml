@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rubrica_classe>
+    <alunno>
+        <id>1</id>
+        <nome>Fabio</nome>
+        <voto_pratico>
+            <id>1</id>
+            <data>2025-12-16T14:40:00+01:00</data>
+            <voto>6.5</voto>
+        </voto_pratico>
+        <voto_teorico>
+            <id>1</id>
+            <data>2025-12-16T10:40:00+01:00</data>
+            <voto>5</voto>
+        </voto_teorico>
+        <media>5.75</media>
+        <commento><![CDATA[Fabio ha bisogno di studiare di più
+        perchè è una pippa.]]></commento>
+    </alunno>
+</rubrica_classe>
