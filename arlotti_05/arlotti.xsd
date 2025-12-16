@@ -8,21 +8,21 @@
                         <xs:sequence>
                             <xs:element name="id" type="xs:integer"/>
                             <xs:element name="nome" type="xs:string"/>
-                            <xs:element name="voto_pratico" type="xs:float" maxOccurs="unbounded">
+                            <xs:element name="voto_pratico" maxOccurs="unbounded">
                                 <xs:complexType>
                                     <xs:sequence>
                                         <xs:element name="id" type="xs:integer"/>
-                                        <xs:element name="data" type="xs:dateTimeStamp"/>
-                                        <xs:element name="voto" type="float"/>
+                                        <xs:element name="data" type="xs:string"/>
+                                        <xs:element name="voto" type="xs:float"/>
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
-                            <xs:element name="voto_teorico" type="xs:float" maxOccurs="unbounded">
+                            <xs:element name="voto_teorico" maxOccurs="unbounded">
                                 <xs:complexType>
                                     <xs:sequence>
                                         <xs:element name="id" type="xs:integer"/>
-                                        <xs:element name="data" type="xs:dateTimeStamp"/>
-                                        <xs:element name="voto" type="float"/>
+                                        <xs:element name="data" type="xs:string"/>
+                                        <xs:element name="voto" type="xs:float"/>
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>

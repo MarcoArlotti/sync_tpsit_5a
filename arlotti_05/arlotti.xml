@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="arlotti.xsd" type="xsd"?>
 <rubrica_classe>
     <alunno>
         <id>1</id>
