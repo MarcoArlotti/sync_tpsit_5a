@@ -130,14 +130,14 @@ Per controllare che la __sintassi__ sia corretta si apre il sito: [FreeFormatter
 ## RESOCONTO FINALE TRAMITE TEST:
 
 >### Una volta finito il programma _YAML_:
->[] Eseguo il programma per vedere se funziona.
->[] Eseguo il programma per vedere se funziona mettendolo facendolo partire tramite un browser web.
->[x] Non si possono eseguire i file YAML.
+> [] Eseguo il programma per vedere se funziona.
+> [] Eseguo il programma per vedere se funziona mettendolo facendolo partire tramite un browser web.
+> [x] Non si possono eseguire i file YAML.
 
 >### Il tag complesso "alunni" contiene il tag semplice "cognome":
->[] si.
->[x] no.
+> [] si.
+> [x] no.
 
 >### Il "voto_teorico" è un tag semplice:
->[] si.
->[x] no.
+> [] si.
+> [x] no.
