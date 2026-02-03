@@ -3,6 +3,14 @@
 
     <head>
         <title>Biblioteca</title>
+        <meta name="decription" content="yap yap yap">
+
+        <style>
+        input,select {
+            display: block;
+            margin: 10px 0 20px 0;
+        }
+        </style>
     </head>
 
     <body>
@@ -10,36 +18,41 @@
         <h1>Benvenuto nella biblioteca di Calma</h1>
         <hr>
 
-        <form class="form" id="form1",method="post"> 
+        <form class="form" id="form1",method="POST">
+
+            <lable for="nome">NOME:</lable>
             <input name="nome" type="text" placeholder="Metti qui il tuo nome">
+
+            <lable for="cognome">COGNOME:</lable>
             <input name="cognome" type="text" placeholder="Metti qui il tuo cognome">
+
+            <lable for="titolo_libro">TITOLO DEL LIBRO:</lable>
             <input name="titolo_libro" type="text" placeholder="Metti il nome del libro">
-            
+
+            <lable for="genere">GENERE:</lable>
             <select name="genere">
                 <option value="narrativa">narrativa</option>
                 <option value="fantasy">fantasy</option>
             </select>
+            
             <input type="submit" value="INVIA"/>
+
         </form>
+
         <hr>
         <footer><i>Arlotti Marco @Arlo 2026</i></footer>
     </body>
 
-    <!-- javaScript -->
     <script>
-        // vai a prendere nel documento l'elemento conn id=""
-        // se voglio il nome di un form, getElementsByTagName("")
-        
-        function salva_dati() {
-            var form = document.getElementById("form1");
-            var formData = new formData.get(form);
-            var json = {};
-            var
-            json[0] = [{
-                "libro":formData.get("titolo_libro"),
-            }]
-            var stringa_json = JSON.stringify(json);
-            // controllo se il file esiste già
+        const form = document.getElementById("form")
+        const dati = new FormData(form);
+
+        let libro = {};
+
+        for([chiave, valore] in dati.entries()){
+            if(chiave !="TODO file json in input");
+                libro[chiave] = valore;
+            
         }
     </script>
 
