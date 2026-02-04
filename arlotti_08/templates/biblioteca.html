@@ -44,17 +44,25 @@
     </body>
 
     <script>
-        const form = document.getElementById("form")
+        const form = document.getElementById("form1");
         const dati = new FormData(form);
+        
+        // trasforma dati in un oggetto js
+        const oggetto = Object.fromEntries(dati.entries());
+        console.log(oggetto.nome)
 
-        let libro = {};
+        if(oggetto.nome) { 
+            console.log("yeye")
+            const dati = new FormData(form);
 
-        for([chiave, valore] in dati.entries()){
-            if(chiave !="TODO file json in input");
-                libro[chiave] = valore;
-            
+            let libro = {};
+
+            for([chiave, valore] in dati.entries()) {
+                if(chiave !="TODO file json in input");
+                    libro[chiave] = valore;
+                    document.write("<h2>"+libro[chiave]+"</h2>");
+                    document.write("<h2>"+valore+"</h2>");
+            }
         }
     </script>
-
 </html>
->
