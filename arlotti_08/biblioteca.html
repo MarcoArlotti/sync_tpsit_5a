@@ -39,30 +39,12 @@
 
         </form>
 
+        <script src="scripts.js" defer></script>
+        
         <hr>
         <footer><i>Arlotti Marco @Arlo 2026</i></footer>
     </body>
 
-    <script>
-        const form = document.getElementById("form1");
-        const dati = new FormData(form);
-        
-        // trasforma dati in un oggetto js
-        const oggetto = Object.fromEntries(dati.entries());
-        console.log(oggetto.nome)
 
-        if(oggetto.nome) { 
-            console.log("yeye")
-            const dati = new FormData(form);
 
-            let libro = {};
-
-            for([chiave, valore] in dati.entries()) {
-                if(chiave !="TODO file json in input");
-                    libro[chiave] = valore;
-                    document.write("<h2>"+libro[chiave]+"</h2>");
-                    document.write("<h2>"+valore+"</h2>");
-            }
-        }
-    </script>
 </html>
