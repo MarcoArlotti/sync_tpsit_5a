@@ -1,26 +1,39 @@
-import java.io *;
-import java.net *;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.Socket;
+import java.util.Scanner;
+import java.util.stream.Stream;
 
-public class SimpleClient {
+public class Client { // stesso nome del file
     public static void main(String[] args) {
-        String host = "localhost";
-        int porta = 69420;
 
-        try (Socket socket = new Socket(host, porta);
-            DataOutputStream out = new.DataOutputStream(socket.getOutputStream());
-            DataInputStream in = new.DataInputStream(socket.getInputStream());
-            BufferedReader console = new BufferedReader(new InputStreamReader(System.in))) {
-                System.out.println("connesso al server" + host + ":" + porta);
-                System.out.print("inserisci il messaggio da inviare: ");
-                String messaggio = console.readline();
+        Socket socket = null;
+        
+        InputStreamReader inputStreamReader = null;
+        OutputStreamWriter outputStreamWriter = null;
 
-                out.writeUTF(messaggio);
-                out.flush();
+        BufferedReader bufferedReader = null; //velocizza la ricezione e del messaggio
+        BufferedWriter bufferedWriter = null;
 
-                String risposta = in.readUTF();
-                System.out.println("risposta dal server:" + risposta);
-                
+        
+        try {
+            Socket = new Socket('localhost',69420); // assegnazione ip + porta
+
+            inputStreamReader = new InputStreamReader(Socket.getInputStream());
+            outputStreamWriter = new OutputStreamWriter(Socket.getOutputStream());
+
+            bufferedReader = new BufferedReader(inputStreamReader);
+            bufferedWriter = new BufferedWriter(outputStreamWriter);
+
+            Scanner scanner = new Scanner(System.in); //prende la scritta dal terminale
+
+            while (true) {
+                String messaggio_da_inviare = scanner.nextLine();
+                bufferedWriter.write(messaggio_da_inviare);
+                bufferedWriter.newLine();
             }
-            
+        }  
     }
 }
