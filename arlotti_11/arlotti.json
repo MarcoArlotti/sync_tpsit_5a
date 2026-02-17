@@ -1,0 +1,43 @@
+{
+    "Competizione_sportiva": [
+        {
+        "regione": "Milano",
+        "nome_competizione": "Milano Cortina",
+        "inizio": "2026-03-01",
+        "conclusione": "2026-06-01",
+        "impianto_sportivo": "Stadio Maradona",
+        "quota_iscrizione": 104.99,
+        "gare": [
+            {
+                "titolo": "100m di Fabio",
+                "data": "2026-03-02T12:00",
+                "durata": "02:00",
+                "categoria": "senior",
+                "descrizione": "bho nuoti e fai 100m di vasche avanti e inditro veloce",
+                "disciplina": "nuoto",
+                "atleti": [
+                    {
+                        "nome": "Alessandro",
+                        "cognome": "Sanchi",
+                        "data_nascita": "2007-10-01",
+                        "nazionalità": "Italiano",
+                        "disciplina_praticata": "nuoto"
+                    }
+                ]
+            }
+        ],
+        "strutture_dedicate": [
+            "nome": TODO,
+            "tipologia": TODO,
+            "posizione": TODO,
+            "disponibilità": "hh:mm"
+        ],
+        "giudici": [
+            "nome": TODO,
+            "cognome": TODO,
+            "qualifica": TODO,
+            "anni_esperienza": TODO,
+        ],
+        },
+    ],
+}

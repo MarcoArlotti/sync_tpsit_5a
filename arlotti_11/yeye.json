@@ -1,0 +1,76 @@
+{
+  "competizioni": [
+    {
+      "id": "comp-2026-001",
+      "nome": "Campionati Regionali Multisport 2026",
+      "data_inizio": "2026-06-10",
+      "data_fine": "2026-06-14",
+      "impianto":"Palazzetto dello Sport - Centro Regionale",
+      "quota_iscrizione": 25.00,
+      "gare": [
+        {
+          "id": "gara-001",
+          "titolo": "5000m Corsa Open",
+          "data_ora_inizio": "2026-06-11T09:00",
+          "durata_prevista": "00:30",
+          "categoria": "senior",
+          "disciplina": "corsa",
+          "regolamento": "Partenza in linea; tempo limite 40 minuti; penalità per false start.",
+          "partecipanti": {
+            "individuali": [
+              { "id_atleta": "ath-100", "pettorale": 12 },
+              { "id_atleta": "ath-101", "pettorale": 15 }
+            ],
+            "squadre": []
+          },
+          "risultati": [
+            { "posizione": 1, "id_atleta": "ath-100", "punteggio": 14.32 },
+            { "posizione": 2, "id_atleta": "ath-101", "punteggio": 14.58 }
+          ]
+        }
+      ],
+      "atleti": [
+        {
+          "id": "ath-100",
+          "nome": "Luca",
+          "cognome": "Rossi",
+          "data_nascita": "2000-04-15",
+          "nazionalita": "ITA",
+          "disciplina_praticata": "corsa"
+        }
+      ],
+      "squadre": [
+        {
+          "id": "team-50",
+          "nome": "Volley Giovani",
+          "anno_fondazione": 2010,
+          "giocatori": [
+            {
+              "nome": "Anna",
+              "cognome": "Verdi",
+              "data_nascita": "2008-01-20",
+              "ruolo": "palleggiatrice"
+            }
+          ]
+        }
+      ],
+      "servizi": [
+        {
+          "id": "svc-1",
+          "nome": "Posto Medico Avanzato",
+          "tipologia": "assistenza medica",
+          "posizione": 5,
+          "orari_disponibilita": [ { "from": "08:00", "to": "20:00" } ]
+        }
+      ],
+      "giudici": [
+        {
+          "nome": "Paolo",
+          "cognome": "Ferrari",
+          "qualifica": "Arbitro Nazionale",
+          "anni_esperienza": 12
+        }
+      ]
+    }
+  ]
+}
