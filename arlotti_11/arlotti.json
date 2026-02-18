@@ -1,43 +1,130 @@
 {
-    "Competizione_sportiva": [
+  "competizioni_sportive": [
+    {
+      "nome": "Meeting Regionale di Atletica",
+      "apertura": "2026-04-10",
+      "chiusura": "2026-04-11",
+      "impianto_sportivo": "Stadio Comunale di Rimini",
+      "quoata_iscrizione": "35.00",
+      "gare": [
         {
-        "regione": "Milano",
-        "nome_competizione": "Milano Cortina",
-        "inizio": "2026-03-01",
-        "conclusione": "2026-06-01",
-        "impianto_sportivo": "Stadio Maradona",
-        "quota_iscrizione": 104.99,
-        "gare": [
+          "disciplina": "Corsa",
+          "titolo": "200 metri piani",
+          "data": "2026-04-10",
+          "orario_inizio": "2026-04-10T15:00",
+          "durata_stimata": "00:20",
+          "categoria": "Senior",
+          "regolamento": "Partenza dai blocchi, un solo falso start consentito.",
+          "alteti": [
             {
-                "titolo": "100m di Fabio",
-                "data": "2026-03-02T12:00",
-                "durata": "02:00",
-                "categoria": "senior",
-                "descrizione": "bho nuoti e fai 100m di vasche avanti e inditro veloce",
-                "disciplina": "nuoto",
-                "atleti": [
-                    {
-                        "nome": "Alessandro",
-                        "cognome": "Sanchi",
-                        "data_nascita": "2007-10-01",
-                        "nazionalità": "Italiano",
-                        "disciplina_praticata": "nuoto"
-                    }
-                ]
+              "nome": "Luca",
+              "cognome": "Bianchi",
+              "data_di_nascita": "1997-06-12",
+              "nazionalità": "Italiana",
+              "disciplina_praticata": "Corsa"
+            },
+            {
+              "nome": "Carlos",
+              "cognome": "Gomez",
+              "data_di_nascita": "1995-03-22",
+              "nazionalità": "Spagnola",
+              "disciplina_praticata": "Corsa"
             }
-        ],
-        "strutture_dedicate": [
-            "nome": TODO,
-            "tipologia": TODO,
-            "posizione": TODO,
-            "disponibilità": "hh:mm"
-        ],
-        "giudici": [
-            "nome": TODO,
-            "cognome": TODO,
-            "qualifica": TODO,
-            "anni_esperienza": TODO,
-        ],
-        },
-    ],
+          ],
+          "risultati_finali": {
+            "posizione_in_classifica": "1",
+            "punteggio_ottenuto": "98"
+          }
+        }
+      ],
+      "strutture": [
+        {
+          "nome": "Punto Medico",
+          "tipologia": "Assistenza medica",
+          "posizione": "12",
+          "orari_disponibilità": [
+            {
+              "orario": "08:00"
+            }
+          ]
+        }
+      ],
+      "giudici_di_gara": [
+        {
+          "nome": "Marco",
+          "cognome": "Rossi",
+          "qualifica": "Giudice federale",
+          "anni_esperienza": "10"
+        }
+      ]
+    },
+    {
+      "nome": "Torneo Regionale di Calcio",
+      "apertura": "2026-06-01",
+      "chiusura": "2026-06-15",
+      "impianto_sportivo": "Centro Sportivo Riccione",
+      "quoata_iscrizione": "120.00",
+      "gare": [
+        {
+          "disciplina": "Calcio",
+          "titolo": "Match inaugurale",
+          "data": "2026-06-01",
+          "orario_inizio": "2026-06-01T18:00",
+          "durata_stimata": "01:45",
+          "categoria": "Juniores",
+          "regolamento": "Partita da 90 minuti, massimo 5 sostituzioni.",
+          "squadre": [
+            {
+              "nome_squadra": "Riccione Youth",
+              "anno_nascita_della_squadra": "2010",
+              "giocatori": [
+                {
+                  "nome": "Andrea",
+                  "cognome": "Ferri",
+                  "data_di_nascita": "2008-04-10",
+                  "ruolo_in_campo": "Attaccante"
+                }
+              ]
+            },
+            {
+              "nome_squadra": "Cesena Juniors",
+              "anno_nascita_della_squadra": "2009",
+              "giocatori": [
+                {
+                  "nome": "Lorenzo",
+                  "cognome": "Rinaldi",
+                  "data_di_nascita": "2008-01-30",
+                  "ruolo_in_campo": "Difensore"
+                }
+              ]
+            }
+          ],
+          "risultati_finali": {
+            "posizione_in_classifica": "1",
+            "punteggio_ottenuto": "3"
+          }
+        }
+      ],
+      "struttre": [
+        {
+          "nome": "Area Tecnica",
+          "tipologia": "Area tecnica",
+          "posizione": "3",
+          "orari_disponibilità": [
+            {
+              "orario": "09:00"
+            }
+          ]
+        }
+      ],
+      "giudici_di_gara": [
+        {
+          "nome": "Giulia",
+          "cognome": "Monti",
+          "qualifica": "Arbitro regionale",
+          "anni_esperienza": "8"
+        }
+      ]
+    }
+  ]
 }
