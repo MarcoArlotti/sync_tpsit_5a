@@ -1,44 +1,26 @@
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.net.Socket;
-import java.util.Scanner;
+import java.io *;
+import java.net *;
 
-public class Client { // stesso nome del file
+public class SimpleClient {
     public static void main(String[] args) {
-        Socket socket;
-        InputStreamReader inputStreamReader;
-        OutputStreamWriter outputStreamWriter;
-        BufferedReader bufferedReader;
-        BufferedWriter bufferedWriter;
-        try {
-            socket = new Socket("localhost",2069); // assegnazione ip + porta
+        String host = "localhost";
+        int porta = 69420;
 
-            inputStreamReader = new InputStreamReader(socket.getInputStream());
-            outputStreamWriter = new OutputStreamWriter(socket.getOutputStream());
+        try (Socket socket = new Socket(host, porta);
+            DataOutputStream out = new.DataOutputStream(socket.getOutputStream());
+            DataInputStream in = new.DataInputStream(socket.getInputStream());
+            BufferedReader console = new BufferedReader(new InputStreamReader(System.in))) {
+                System.out.println("connesso al server" + host + ":" + porta);
+                System.out.print("inserisci il messaggio da inviare: ");
+                String messaggio = console.readline();
 
-            bufferedReader = new BufferedReader(inputStreamReader);
-            bufferedWriter = new BufferedWriter(outputStreamWriter);
+                out.writeUTF(messaggio);
+                out.flush();
 
-            Scanner scanner = new Scanner(System.in); //prende la scritta dal terminale
-
-            while (true) {
-                String messaggio_da_inviare = scanner.nextLine();
-                bufferedWriter.write(messaggio_da_inviare);
-                bufferedWriter.newLine();
-                bufferedWriter.flush();
-
-                System.out.println("Server:" + bufferedReader.readLine());
-
-                if (messaggio_da_inviare.equalsIgnoreCase("exit")) //se uscito esci dal while
-                    break;
+                String risposta = in.readUTF();
+                System.out.println("risposta dal server:" + risposta);
+                
             }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+            
     }
 }
