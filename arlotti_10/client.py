@@ -10,3 +10,4 @@ class client:
     def send():
         
     def recive():
+        # https://www.programmareinpython.it/video-corso-python-intermedio/06-il-modulo-socket-introduzione/
