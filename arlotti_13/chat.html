@@ -5,9 +5,10 @@
   <title>Modulo + JSON</title>
   <style>
     input {
-      border-block-color: rgb(243, 123, 123);
+      border-block-color: rgb(209, 108, 108);
     }
   </style>
+
 </head>
 <body>
 
@@ -16,10 +17,11 @@
 
   <h2>Aggiungi nuovo oggetto</h2>
   <form id="form1">
-    <input name="titolo" placeholder="Titolo" required onclick="colo"><br>
-    <input name="autore" placeholder="Autore" required><br>
+    <input class="dimamico" name="titolo" placeholder="Titolo" required onclick="cambia_colore()"><br>
+    <input class="dimamico" name="autore" placeholder="autore" required onclick="cambia_colore()"><br>
     <button type="submit">Aggiungi e scarica JSON</button>
   </form>
   <script src="js.js"></script>
 </body>
 </html>
+

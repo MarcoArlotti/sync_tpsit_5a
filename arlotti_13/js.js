@@ -1,5 +1,12 @@
 let datiJson = [];
 
+function cambia_colore() {
+  const boxes = document.querySelectorAll('.dimamico');
+
+  boxes.forEach(box => {
+    box.style.borderBlockColor = "rgb(255, 0, 0)";
+  });
+}
 
 // Leggi il file JSON caricato
 const fileInput = document.getElementById("fileInput");
