@@ -54,13 +54,13 @@
   </select>
 
   <label for="sezione">Sezione:</label>
-  <input type="number" id="sezione" min="1" max="5"><br>
+  <input type="number" id="sezione"><br>
 
   <label for="bocciato">Bocciato:</label>
   <input type="checkbox" id="bocciato"><br>
 
   <label for="anni_ripetuti">Anni ripetuti:</label>
-  <input type="number" id="anni_ripetuti" min="0" value="0"><br>
+  <input type="number" id="anni_ripetuti"><br>
 
   <label for="uscita">Uscita:</label>
   <select id="uscita">
@@ -68,11 +68,65 @@
     <option value="università">università</option>
   </select>
 
-  <button type="submit">Aggiungi studente</button>
+  <button onclick="controlla()" type="submit">Aggiungi studente</button>
 </form>
 
     <script>
+      function controlla() {
+      let nome_form = document.getElementById("nome").value;
+      let nome_valido;
 
+      if (nome_form.length <= 30 && nome_form.length > 0) {
+        nome_valido = true;
+      } else {
+        nome_valido = false;
+      }
+    
+      let cognome_form = document.getElementById("cognome").value;
+      let cognome_valido;
+    
+      if (cognome_form.length <= 30 && cognome_form.length > 0) {
+        cognome_valido = true;
+      } else {
+        cognome_valido = false; // (lasciato come nel tuo codice)
+      }
+    
+      let codice_form = document.getElementById("codice_fiscale").value;
+      let codice_fiscale;
+    
+      if (codice_form.length == 16) {
+        codice_fiscale = true;
+      } else {
+        codice_fiscale = false;
+      }
+    
+      let sezione_form = document.getElementById("sezione").value;
+      let sezione;
+    
+      if (sezione_form <= 5 && sezione_form >= 1) {
+        sezione = true;
+      } else {
+        sezione = false;
+      }
+    
+      let bocciato = document.getElementById("bocciato").value;
+    
+      let anni_ripetuti_form = document.getElementById("anni_ripetuti").value;
+      let anni_ripetuti;
+    
+      if (anni_ripetuti_form <= 99 && anni_ripetuti_form >= 1) {
+        anni_ripetuti = true;
+      } else {
+        anni_ripetuti = false;
+      }
+    
+      document.write("<p>nome_valido VALIDO:" + nome_valido + "</p>");
+      document.write("<p>cognome_valido VALIDO:" + cognome_valido + "</p>");
+      document.write("<p>codice_fiscale VALIDO:" + codice_fiscale + "</p>");
+      document.write("<p>sezione VALIDO:" + sezione + "</p>");
+      document.write("<p>bocciato VALIDO:" + bocciato + "</p>");
+      document.write("<p>anni_ripetuti VALIDO:" + anni_ripetuti + "</p>");
+    }
     </script>
 </body>
 </html>
