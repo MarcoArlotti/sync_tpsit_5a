@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <head>
+
+    </head>
+    <body>
+        <form>
+            <input id="ricerca" placeholder="cerca una localita'"">
+        </form>
+        {% if localita %}
+            {% for singola_localita in localita %}
+                <div>
+                    {{ singola_localita.nome }}
+                    {{ singola_localita.nome }}
+                    {{ singola_localita.ID }}
+                    {{ singola_localita.name }}
+                    {{ singola_localita.slug }}
+                    {{ singola_localita.lat }}
+                    {{ singola_localita.lng }}
+                    {{ singola_localita.codice_provincia_istat }}
+                    {{ singola_localita.codice_comune_istat }}
+                    {{ singola_localita.codice_alfanumerico_istat }}
+                    {{ singola_localita.capoluogo_provincia }}
+                    {{ singola_localita.capoluogo_regione }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    </body>
+</html>
