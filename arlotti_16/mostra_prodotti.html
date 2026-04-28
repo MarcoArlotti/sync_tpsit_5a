@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Lista di Prodotti:</h1>
+
+        <form>
+            <label for="codice">CODICE:</label>
+            <input type="text" name="codice" id="codice" placeholder="inserisci l'id del prodotto">
+            <input type="button" value="ricerca prodotto" onclick="cerca_valori()">
+        </form>
+
+        <script>
+            function cerca_valori() {
+                // mayby loadDoc()
+                var xhttp = new XMLHttpRequest()
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("codice").innerHTML = this.responseText;
+                    }
+                };
+
+                const CODICE_INSERITO = document.getElementById("codice").value;
+                
+                if(CODICE_INSERITO.match(/[a-z|A-z][1-9]{3}/)) {
+                    xhttp.open("GET", "dati.json", true);
+                    xhttp.send();
+                } else {
+                    alert("id inserito non valido");
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,54 +1,28 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Cerca località</title>
-</head>
+    <head>
 
-<body>
-
-    <input id="ricerca" placeholder="Cerca una località" onkeyup="loadDoc()">
-
-    <div id="risultati"></div>
-
-    <script>
-        function loadDoc() {
-            var valore = document.getElementById("ricerca").value;
-
-            document.getElementById("risultati").innerHTML = "";
-            var xhttp = new XMLHttpRequest();
-
-            xhttp.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-
-                    let dati = JSON.parse(this.responseText);
-
-                    let html = "";
-
-                    dati.forEach(function (item) {
-                        html += `
-                            <div style="border:1px solid #ccc; padding:10px; margin-bottom:10px;">
-                                <div><b>ID:</b> ${item.ID}</div>
-                                <div><b>Name:</b> ${item.name}</div>
-                                <div><b>Slug:</b> ${item.slug}</div>
-                                <div><b>Lat:</b> ${item.lat}</div>
-                                <div><b>Lng:</b> ${item.lng}</div>
-                                <div><b>Prov. ISTAT:</b> ${item.codice_provincia_istat}</div>
-                                <div><b>Comune ISTAT:</b> ${item.codice_comune_istat}</div>
-                                <div><b>Codice alfanumerico:</b> ${item.codice_alfanumerico_istat}</div>
-                                <div><b>Capoluogo provincia:</b> ${item.capoluogo_provincia}</div>
-                                <div><b>Capoluogo regione:</b> ${item.capoluogo_regione}</div>
-                            </div>
-                        `;
-                    });
-                    document.getElementById("risultati").innerHTML = html;
-                }
-            };
-
-            xhttp.open("GET", "/cerca?q=" + encodeURIComponent(valore), true);
-            xhttp.send();
-        }
-    </script>
-
-</body>
+    </head>
+    <body>
+        <form>
+            <input id="ricerca" placeholder="cerca una localita'"">
+        </form>
+        {% if localita %}
+            {% for singola_localita in localita %}
+                <div>
+                    {{ singola_localita.nome }}
+                    {{ singola_localita.nome }}
+                    {{ singola_localita.ID }}
+                    {{ singola_localita.name }}
+                    {{ singola_localita.slug }}
+                    {{ singola_localita.lat }}
+                    {{ singola_localita.lng }}
+                    {{ singola_localita.codice_provincia_istat }}
+                    {{ singola_localita.codice_comune_istat }}
+                    {{ singola_localita.codice_alfanumerico_istat }}
+                    {{ singola_localita.capoluogo_provincia }}
+                    {{ singola_localita.capoluogo_regione }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    </body>
 </html>
