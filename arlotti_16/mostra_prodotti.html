@@ -1,35 +1,64 @@
 <!DOCTYPE html>
-    <head>
+<html>
+<head>
+</head>
+<body>
+<style>
+div {
+  border: 2px solid rgb(179, 0, 255);
+}
+</style>
+<h1>Ricerca Prodotto</h1>
 
-    </head>
-    <body>
-        <h1>Lista di Prodotti:</h1>
+<form>
+  <label for="codice">CODICE:</label>
+  <input type="text" id="codice" oninput="loadDoc()" placeholder="inserisci id prodotto">
+</form>
 
-        <form>
-            <label for="codice">CODICE:</label>
-            <input type="text" name="codice" id="codice" placeholder="inserisci l'id del prodotto">
-            <input type="button" value="ricerca prodotto" onclick="cerca_valori()">
-        </form>
+<div id="risultato"></div>
 
-        <script>
-            function cerca_valori() {
-                // mayby loadDoc()
-                var xhttp = new XMLHttpRequest()
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4 && this.status == 200) {
-                        document.getElementById("codice").innerHTML = this.responseText;
-                    }
-                };
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
 
-                const CODICE_INSERITO = document.getElementById("codice").value;
-                
-                if(CODICE_INSERITO.match(/[a-z|A-z][1-9]{3}/)) {
-                    xhttp.open("GET", "dati.json", true);
-                    xhttp.send();
-                } else {
-                    alert("id inserito non valido");
-                }
-            }
-        </script>
-    </body>
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var data = JSON.parse(this.responseText);
+      generaXML(data);
+    }
+  };
+
+  xhttp.open("GET", "prodotti.json", true);
+  xhttp.send();
+}
+
+function generaXML(data) {
+  var codice = document.getElementById("codice").value;
+  var prodotti = data.inventario.prodotto;
+
+  var output = "";
+
+  for (var i = 0; i < prodotti.length; i++) {
+    var p = prodotti[i];
+
+    if (p.id === codice) {
+      output = `<?xml version="1.0" encoding="UTF-16"?>
+    <prodotto>
+    <prezzo>${p.prezzo}</prezzo>
+    <marca>${p.marca}</marca>
+    <modello>${p.modello}</modello>
+    </prodotto>`;
+      break;
+    }
+  }
+
+  if (output === "") {
+    output = "Prodotto non trovato";
+  }
+
+  document.getElementById("risultato").textContent = output;
+}
+</script>
+
+</body>
 </html>

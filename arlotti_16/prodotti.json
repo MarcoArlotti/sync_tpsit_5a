@@ -1,0 +1,42 @@
+{
+  "inventario": {
+    "prodotto": [
+      {
+        "id": "G742",
+        "prezzo": 899.00,
+        "marca": "ASUS",
+        "modello": "ROG Strix GeForce RTX 4080 Super"
+      },
+      {
+        "id": "P109",
+        "prezzo": 420.00,
+        "marca": "AMD",
+        "modello": "Ryzen 7 7800X3D"
+      },
+      {
+        "id": "M552",
+        "prezzo": 215.00,
+        "marca": "MSI",
+        "modello": "MAG Z790 Tomahawk WiFi"
+      },
+      {
+        "id": "S831",
+        "prezzo": 185.00,
+        "marca": "Samsung",
+        "modello": "990 Pro 2TB NVMe SSD"
+      },
+      {
+        "id": "R204",
+        "prezzo": 999999.00,
+        "marca": "Corsair",
+        "modello": "Vengeance DDR5 32GB 6000MHz"
+      },
+      {
+        "id": "V012",
+        "prezzo": 1950.00,
+        "marca": "NVIDIA",
+        "modello": "GeForce RTX 4090 Founders Edition"
+      }
+    ]
+  }
+}
