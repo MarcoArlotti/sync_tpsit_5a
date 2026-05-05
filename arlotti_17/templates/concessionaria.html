@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+        <h1>Concessonaria Arlo's</h1>
+        <hr>
+        <h2>Le nostre auto</h2>
+        <body>
+            <form id="form">
+                <label for="marca">Marca:</label>
+                <input type="text" id="marca" name="marca">
+                <br>
+
+                <label for="modello">Modello:</label>
+                <input type="text" id="modello" name="modello">
+                <br>
+
+                <label for="alimentazione">Alimentazione:</label>
+                <input type="text" id="alimentazione" name="alimentazione">
+                <br>
+
+                <label for="colore">Colore:</label>
+                <input type="text" id="colore" name="colore">
+                <br>
+                <button onclick="cerca_auto()">Invia</button>
+            </form>
+
+            <div id="risultato"></div>
+        </body>
+
+    <script>
+        function cerca_auto() {
+            let form = document.getElementById("form");
+            let form_data = new FormData(form);
+            
+            // TODO se non si ha trovato niente o campi errati
+            document.getElementById("risultato").innerHTML = "";
+            
+
+        }
+    </script>
+</html>
