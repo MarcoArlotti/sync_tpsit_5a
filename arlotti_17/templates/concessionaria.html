@@ -36,7 +36,14 @@
             
             // TODO se non si ha trovato niente o campi errati
             document.getElementById("risultato").innerHTML = "";
-            
+
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function() {
+                if(request.readyState == XMLHttpRequest.DONE && request.status == 200) {
+                    document.getElementById("risultato").innerHTML = request.responseText;
+                }
+            }
+            request.open("GET", "/?")
 
         }
     </script>
