@@ -1,0 +1,110 @@
+[
+  {
+    "marca": "Fiat",
+    "modello": "500",
+    "alimentazione": "Hybrid",
+    "colore": "Verde Rugiada"
+  },
+  {
+    "marca": "Ford",
+    "modello": "Fiesta",
+    "alimentazione": "Benzina",
+    "colore": "Race Red"
+  },
+  {
+    "marca": "Audi",
+    "modello": "A1",
+    "alimentazione": "Diesel",
+    "colore": "Grigio Freccia"
+  },
+  {
+    "marca": "Toyota",
+    "modello": "Yaris",
+    "alimentazione": "Hybrid",
+    "colore": "Electric Blue"
+  },
+  {
+    "marca": "Tesla",
+    "modello": "Model 3",
+    "alimentazione": "Elettrica",
+    "colore": "Bianco Perla"
+  },
+  {
+    "marca": "Alfa Romeo",
+    "modello": "Tonale",
+    "alimentazione": "Plug-in Hybrid",
+    "colore": "Verde Montreal"
+  },
+  {
+    "marca": "Volkswagen",
+    "modello": "Golf",
+    "alimentazione": "Metano",
+    "colore": "Pure White"
+  },
+  {
+    "marca": "BMW",
+    "modello": "Serie 3",
+    "alimentazione": "Diesel",
+    "colore": "Portimao Blue"
+  },
+  {
+    "marca": "Dacia",
+    "modello": "Sandero",
+    "alimentazione": "GPL",
+    "colore": "Iron Blue"
+  },
+  {
+    "marca": "Hyundai",
+    "modello": "IONIQ 5",
+    "alimentazione": "Elettrica",
+    "colore": "Gravity Gold"
+  },
+  {
+    "marca": "Peugeot",
+    "modello": "208",
+    "alimentazione": "Benzina",
+    "colore": "Giallo Faro"
+  },
+  {
+    "marca": "Jeep",
+    "modello": "Renegade",
+    "alimentazione": "Hybrid",
+    "colore": "Bikini Blue"
+  },
+  {
+    "marca": "Mercedes-Benz",
+    "modello": "Classe A",
+    "alimentazione": "Diesel",
+    "colore": "Nero Cosmo"
+  },
+  {
+    "marca": "Volvo",
+    "modello": "XC40",
+    "alimentazione": "Elettrica",
+    "colore": "Sage Green"
+  },
+  {
+    "marca": "Renault",
+    "modello": "Captur",
+    "alimentazione": "Full Hybrid",
+    "colore": "Be-Style Milano"
+  },
+  {
+    "marca": "Porsche",
+    "modello": "911 Carrera",
+    "alimentazione": "Benzina",
+    "colore": "Crayon"
+  },
+  {
+    "marca": "Kia",
+    "modello": "Sportage",
+    "alimentazione": "Mild Hybrid Diesel",
+    "colore": "Experience Green"
+  },
+  {
+    "marca": "Lancia",
+    "modello": "Ypsilon",
+    "alimentazione": "Hybrid",
+    "colore": "Blu Elegante"
+  }
+]
